@@ -1,0 +1,78 @@
+.user {
+    box-sizing: border-box;
+    width: 20%;
+    min-height: 190px;
+    font-family: Roboto;
+    color: #000000;
+    font-size: 15px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: #ffffff 2px solid;
+    margin: 10px 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+
+}
+.userName {
+    margin: 10px auto;
+}
+
+.user:hover {
+    background-color: rgba(90, 81, 81, 0.2);
+    transition: background-color .5s;
+}
+
+.user img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+.user img:hover {
+    transform: scale(1.3);
+    transition: .5s;
+}
+
+.user .deleteProfile {
+    text-align: center;
+    margin: 10px 0px;
+}
+
+.user .deleteFromState {
+    margin-top: 10px;
+}
+
+.user .deleteProfile:hover {
+    color: red;
+    transition: color .5s;
+}
+
+.user .deleteFromState:hover {
+    color: #070101;
+    transition: color .5s;
+}
+
+.wrapperFromUser {
+    box-sizing: border-box;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.loader {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+}
+
+.schAddUse {
+    width: 100%;
+    padding-top: 30px;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

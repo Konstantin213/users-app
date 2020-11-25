@@ -1,0 +1,25 @@
+.modal {
+    font-family: Roboto;
+    font-size: 17px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.modal img {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+}
+
+.buttonProfile{
+    opacity: 1;
+    font-size: 12px;
+    margin-bottom: 10px;
+
+}
+
+.buttonMore:hover {
+    background-color: #3aaaff;
+    transition: background-color .5s;
+}

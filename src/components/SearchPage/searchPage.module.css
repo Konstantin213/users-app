@@ -1,0 +1,11 @@
+.searchButton {
+    text-align: center;
+    padding-top: 15px;
+}
+.backButton {
+    width: 50px;
+    transform: scale(2);
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+}
