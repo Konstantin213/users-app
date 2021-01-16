@@ -24,6 +24,12 @@ export const usersAPI = {
                 return response.data.user;
             })
     },
+    editUserRequest(editValue) {
+        return instance.put(`Users/${editValue.id}`, editValue)
+            .then(response => {
+                return response.data;
+            })
+    },
     deleteUserRequest(id) {
         return instance.delete(`Users/${id}`)
     }

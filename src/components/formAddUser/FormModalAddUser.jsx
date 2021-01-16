@@ -13,13 +13,27 @@ const FormModalAddUser = ({visible, onCreate, onCancel}) => {
             span: 16,
         },
     };
+    const validateMessages = {
+        // eslint-disable-next-line no-template-curly-in-string
+        required: "Требуется ввести ${label}",
+        types: {
+            email: 'Введите корректный Email',
+        },
+        string: {
+            // eslint-disable-next-line no-template-curly-in-string
+            min: "${label} может содержать только буквы"
+        },
+        number: {
+            range: "${label} должен быть от ${min} до ${max}"
+        },
+    }
 
     return (
         <Modal
             visible={visible}
-            title="Add new user"
-            okText="Add"
-            cancelText="Cancel"
+            title="Добавить нового пользователя"
+            okText="Добавить"
+            cancelText="Отмена"
             onCancel={onCancel}
             onOk={(e) => {
                 e.preventDefault()
@@ -36,16 +50,18 @@ const FormModalAddUser = ({visible, onCreate, onCancel}) => {
         >
             <Form
                 form={form}
+                validateMessages={validateMessages}
                 layout="vertical"
                 name="form_in_modal"
             >
                 <Form.Item
                     name={'age'}
-                    label="Age"
+                    label="Возраст"
                     rules={[
                         {
                             type: "number",
-                            min: 0,
+                            required: true,
+                            min: 18,
                             max: 99,
                         },
                     ]}
@@ -54,7 +70,7 @@ const FormModalAddUser = ({visible, onCreate, onCancel}) => {
                 </Form.Item>
                 <Form.Item
                     name={'userName'}
-                    label="UserName"
+                    label="Ник пользователя"
                     rules={[
                         {
                             required: true
@@ -65,7 +81,7 @@ const FormModalAddUser = ({visible, onCreate, onCancel}) => {
                 </Form.Item>
                 <Form.Item
                     name={'firstName'}
-                    label="FirstName"
+                    label="Имя"
                     rules={[
                         {
                             required: true
@@ -76,13 +92,18 @@ const FormModalAddUser = ({visible, onCreate, onCancel}) => {
                 </Form.Item>
                 <Form.Item
                     name={'lastName'}
-                    label="LastName"
+                    label="Фамилия"
+                    rules={[
+                        {
+                            required: true
+                        },
+                    ]}
                 >
                     <Input/>
                 </Form.Item>
                 <Form.Item
                     name={'geolocation'}
-                    label="Geolocation"
+                    label="Страна"
                 >
                     <Input/>
                 </Form.Item>
@@ -91,6 +112,7 @@ const FormModalAddUser = ({visible, onCreate, onCancel}) => {
                     label="Email"
                     rules={[
                         {
+                            required: true,
                             type: 'email'
                         },
                     ]}>

@@ -4,7 +4,13 @@ import {
     setUserProfile,
     SET_MORE_USERS,
     setMoreUsers,
-    SET_SEARCH_RESULT, setSearchResult, ADD_USER, addUserToState, DELETE_USER, deleteUserFromState
+    SET_SEARCH_RESULT,
+    setSearchResult,
+    ADD_USER,
+    addUserToState,
+    DELETE_USER,
+    deleteUserFromState,
+    SET_EDIT_USER, setEditUserFromState
 } from "./actions";
 import * as _ from "lodash";
 
@@ -43,6 +49,12 @@ const usersReducer = (state = initialState, action) => {
                 users: [...state.users, action.formValues]
             };
         }
+        case SET_EDIT_USER : {
+            return {
+                ...state,
+                users: [...state.users, action.data]
+            };
+        }
         case DELETE_USER : {
             return {
                 ...state,
@@ -68,7 +80,6 @@ export const getMoreUsers = () => {
         dispatch(setMoreUsers(data.users))
     }
 };
-// search through a server request
 export const searchResult = (value) => {
     return async (dispatch) => {
         const data = await usersAPI.getSearchResult(value)
@@ -79,6 +90,12 @@ export const addNewUser = (formValues) => {
     return async (dispatch) => {
         await usersAPI.addUserRequest(formValues)
         dispatch(addUserToState(formValues))
+    }
+};
+export const editUser = (editValue) => {
+    return async (dispatch) => {
+        const data = await usersAPI.editUserRequest(editValue)
+        dispatch(setEditUserFromState(data))
     }
 };
 export const deleteUser = (id) => {

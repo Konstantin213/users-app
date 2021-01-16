@@ -21,7 +21,9 @@ const ModalWindowAntd = ({user, deleteUser}) => {
             <Space>
                 <div>
                     <Tooltip title="Delete user">
-                        <span><CloseOutlined onClick={() => {modal.confirm(config)}}/>
+                        <span><CloseOutlined onClick={() => {
+                            modal.confirm(config)
+                        }}/>
                         </span>
                     </Tooltip>
                 </div>

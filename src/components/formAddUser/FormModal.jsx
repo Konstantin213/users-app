@@ -13,14 +13,14 @@ export const FormModal = ({addUser}) => {
 
     return (
         <div>
-            <Tooltip title="Add user">
+            <Tooltip title="Добавить нового пользователя">
     <span>
         <Button
             type="primary"
             onClick={() => {
                 setVisible(true)
             }}>
-                New User
+                Добавить нового пользователя
             </Button>
     </span>
             </Tooltip>

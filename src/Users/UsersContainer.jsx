@@ -10,11 +10,11 @@ import {
 } from "../redux/usersReducer";
 import 'antd/dist/antd.css';
 import s from "./user.module.css";
-import sch from "./SearchPage/search.module.css";
+import sch from "../components/SearchPage/search.module.css";
 import {Input} from "antd";
 import {useHistory} from "react-router-dom";
 import wrap from './wrapper.module.css'
-import {FormModal} from "./formAddUser/FormModal";
+import {FormModal} from "../components/formAddUser/FormModal";
 
 const {Search} = Input;
 
@@ -51,7 +51,7 @@ const UsersContainer = () => {
                 <div className={sch.search}>
                     <Search
                         maxLength={20}
-                        placeholder="Search to Username"
+                        placeholder="Поиск пользователя"
                         onSearch={onSearch}
                         style={{width: 200}}
                     />

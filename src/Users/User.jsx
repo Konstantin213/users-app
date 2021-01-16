@@ -1,8 +1,9 @@
-import React from "react";
+ import React from "react";
 import s from "./user.module.css"
 import 'antd/dist/antd.css';
-import ModalWindow from "./modalWindow/ModalWindowProfileUser";
-import ModalWindowDeleteUser from "./modalWindow/ModalWindowDeleteUser";
+import ModalWindow from "../components/modalWindow/ModalWindowProfileUser";
+import ModalWindowDeleteUser from "../components/modalWindow/ModalWindowDeleteUser";
+
 
 const User = ({user,deleteUser}) => {
 
@@ -15,7 +16,7 @@ const User = ({user,deleteUser}) => {
                 <img src={user.avatar} alt={'In progress'}/>
             </div>
             <div>
-                <div className={s.userName}>Username : {user.userName}</div>
+                <div className={s.userName}>Ник : {user.userName}</div>
             </div>
             <ModalWindow user={user}/>
         </div>
