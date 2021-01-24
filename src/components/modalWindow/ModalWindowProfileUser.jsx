@@ -18,7 +18,7 @@ const ModalWindow = (props) => {
         visible: false,
         keyboard: true,
         maskClosable: true,
-        content: <div>
+        content: <div className={s.profile}>
             <Card size="small" title={user.userName} style={{width: 300}}>
                 <p><img src={user.avatar} alt={'In progress'}/></p>
                 <p>Возраст : {user.age}</p>

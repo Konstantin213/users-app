@@ -47,7 +47,7 @@ const UsersContainer = () => {
 
     return (
         <div className={wrap.wrapper}>
-            <div className={s.schAddUse}>
+            <div className={s.formAddUser}>
                 <div className={sch.search}>
                     <Search
                         maxLength={20}

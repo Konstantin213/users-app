@@ -20,7 +20,7 @@ export const FormModal = ({addUser}) => {
             onClick={() => {
                 setVisible(true)
             }}>
-                Добавить нового пользователя
+                Добавить пользователя
             </Button>
     </span>
             </Tooltip>

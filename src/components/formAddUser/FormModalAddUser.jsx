@@ -31,7 +31,7 @@ const FormModalAddUser = ({visible, onCreate, onCancel}) => {
     return (
         <Modal
             visible={visible}
-            title="Добавить нового пользователя"
+            title="Добавить пользователя"
             okText="Добавить"
             cancelText="Отмена"
             onCancel={onCancel}
@@ -52,6 +52,7 @@ const FormModalAddUser = ({visible, onCreate, onCancel}) => {
                 form={form}
                 validateMessages={validateMessages}
                 layout="vertical"
+                size="small"
                 name="form_in_modal"
             >
                 <Form.Item

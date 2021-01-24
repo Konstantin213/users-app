@@ -13,7 +13,6 @@
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
-
 }
 .userName {
     margin: 10px auto;
@@ -68,7 +67,7 @@
     left: 50%;
 }
 
-.schAddUse {
+.formAddUser {
     width: 100%;
     padding-top: 30px;
     margin-bottom: 30px;
@@ -79,4 +78,26 @@
 .filterButton {
     display: flex;
     justify-content: center;
+}
+
+@media screen and (max-width: 415px) {
+    .user {
+        box-sizing: border-box;
+        width: 70%;
+        font-family: "Segoe UI";
+        font-size: 20px;
+    }
+    .formAddUser {
+        width: 90%;
+        margin: 20px;
+        display: flex;
+        flex-direction: column;
+        padding-top: 0px;
+    }
+}
+@media screen and (max-width: 769px) {
+    .user {
+        width: 80%;
+        font-size: 25px;
+    }
 }

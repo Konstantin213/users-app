@@ -52,7 +52,7 @@ const Users = (props) => {
                 hasMore={hasMore}
             >
                 <div className={s.filterButton}>
-                    <Select placeholder='Показать :' style={{width: '200px', marginBottom : 30}} onChange={onChange}>
+                    <Select placeholder='Показать :' style={{width: '200px', marginBottom: 30}} onChange={onChange}>
                         <Option value="Все">Все пользователи</Option>
                         <Option value="true">У кого 'True'</Option>
                         <Option value="false">У кого 'False'</Option>

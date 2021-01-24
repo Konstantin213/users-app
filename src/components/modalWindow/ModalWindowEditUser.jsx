@@ -4,6 +4,7 @@ import {Button, Modal, Form, Input, InputNumber} from "antd";
 import {useDispatch} from "react-redux";
 import {editUser} from "../../redux/usersReducer";
 import {infoMessageSuccessEdit} from "../utilits/infoMessageSuccessEdit";
+import s from "./modal.module.css"
 
 const layout = {
     labelCol: {
@@ -59,10 +60,15 @@ const ModalWindowEditUser = (props) => {
 
     return (
         <>
-            <Button type="primary" onClick={showModal}>
+            <Button type="primary"
+                    onClick={showModal}>
                 Редактировать
             </Button>
-            <Modal title="Редактирование" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
+            <Modal className={s.editForm}
+                   title="Редактирование"
+                   visible={isModalVisible}
+                   onOk={handleOk}
+                   onCancel={handleCancel}>
                 <div>
                     <Form {...layout}
                           form={form}

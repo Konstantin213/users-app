@@ -1,32 +1,34 @@
 import React from "react";
-import {useSelector} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import 'antd/dist/antd.css';
 import {useHistory} from "react-router-dom";
 import s from './searchPage.module.css'
 import sU from '../../Users/user.module.css'
 import User from "../../Users/User";
 import * as _ from "lodash";
-import {Tooltip} from "antd";
 import ArrowLeftOutlined from "@ant-design/icons/lib/icons/ArrowLeftOutlined"
+import {getUsersProfile} from "../../redux/usersReducer";
 
 const SearchPage = () => {
 
-    const user = useSelector(state => state.usersPage.users);
+    const userFind = useSelector(state => state.usersPage.userFind);
 
-    const userSearch = _.map(user, u => <User user={u} key={u.id}/>)
+    const userSearch = _.map(userFind, u => <User user={u} key={u.id}/>)
 
     const history = useHistory()
 
+    const dispatch = useDispatch()
+
     return (
         <div>
-            <Tooltip>
-                        <span><ArrowLeftOutlined
+                        <span>
+                            <ArrowLeftOutlined
                             className={s.backButton}
                             onClick={() => {
-                                history.push({pathname: '/users'})
+                                history.push({pathname: '/'})
+                                dispatch(getUsersProfile())
                             }}
                         /></span>
-            </Tooltip>
             <div className={sU.wrapperFromUser}>
                 {userSearch}
             </div>

@@ -12,7 +12,7 @@ const App = () => {
     return (
         <Suspense fallback={<div className={s.loader}>
             <Spinner/></div>}>
-            <Route path="/users" render={() => <UsersContainer/>}/>
+            <Route path="/" render={() => <UsersContainer/>}/>
             <Route path="/search" render={() => <SearchPage/>}/>
         </Suspense>
     );

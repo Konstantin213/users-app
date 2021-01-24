@@ -12,7 +12,7 @@
     display: flex;
 }
 
-.buttonProfile{
+.buttonProfile {
     opacity: 1;
     font-size: 12px;
     margin-bottom: 10px;
@@ -23,3 +23,14 @@
     background-color: #3aaaff;
     transition: background-color .5s;
 }
+
+@media screen and (max-width: 769px) {
+    .profile {
+        transform: scale(1.3)
+    }
+    .editForm {
+        transform: scale(1.3);
+        padding-top: 50px;
+    }
+}
+

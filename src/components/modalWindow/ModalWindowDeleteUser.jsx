@@ -10,7 +10,7 @@ const UnreachableContext = React.createContext();
 const ModalWindowAntd = ({user, deleteUser}) => {
 
     const config = {
-        title: 'Are you sure?',
+        title: 'Вы уверены?',
         visible: false,
         onOk: () => deleteUser(user.id)
     }
@@ -20,7 +20,7 @@ const ModalWindowAntd = ({user, deleteUser}) => {
         <ReachableContext.Provider value="Light">
             <Space>
                 <div>
-                    <Tooltip title="Delete user">
+                    <Tooltip title="Удалить пользователя">
                         <span><CloseOutlined onClick={() => {
                             modal.confirm(config)
                         }}/>
